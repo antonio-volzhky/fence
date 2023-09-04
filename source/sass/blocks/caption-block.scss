@@ -1,0 +1,16 @@
+.caption-block {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    min-height: 110px;
+
+    border-bottom: 8px solid #9ebffd;
+
+    background-image: linear-gradient(45deg , #d6d7d5,#f8f7f4, #f0f0ee);
+
+    & h1 {
+        margin: 0;
+
+        @include font-b(24px,700,1,0,#1c3b73);
+    }
+}

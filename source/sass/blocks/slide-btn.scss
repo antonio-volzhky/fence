@@ -1,0 +1,11 @@
+.js-btn-prev,
+.js-btn-next {
+    @include btn();
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+

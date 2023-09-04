@@ -1,0 +1,67 @@
+
+mixin form-armor(className)
+    .container
+        form.form-armor(action="#" method="GET" class=className)
+            .form-armor__caption
+                strong Забронировать
+                !=" виллу"
+            .form-armor__input-block
+                .form-armor__date-row.js-date-form
+                    label.form-armor__input-label
+                        input.input.named.js-date.js-date-in(type="text")
+                        span.form-armor__input-name Заезд
+                        span.form-armor__input-icon
+                            svg(width="18" height="20")
+                                use(xlink:href="#icon-date")
+                    label.form-armor__input-label
+                        input.input.named.js-date.js-date-out(type="text")
+                        span.form-armor__input-name Выезд
+                        span.form-armor__input-icon
+                            svg(width="18" height="20")
+                                use(xlink:href="#icon-date")
+                label.form-armor__input-label
+                    input.input.named(type="text" value="2 взрослых, 2 детей")
+                    span.form-armor__input-name Гости
+                    span.form-armor__input-icon
+                        svg(width="24" height="16")
+                            use(xlink:href="#icon-people")
+                .form-armor__radio-row
+                    label
+                        input.visually-hidden(type="radio", name="form-armor-radio", checked)
+                        span
+                        |Вилла # 1
+                    label
+                        input.visually-hidden(type="radio", name="form-armor-radio")
+                        span
+                        |Вилла # 2
+                label.form-armor__input-label
+                    input.input(type="text" placeholder="Ваше имя")
+                label.form-armor__input-label
+                    input.input(type="tel" placeholder="Ваше телефон")
+                .form-armor__check-row
+                    label
+                        input.visually-hidden(type="checkbox")
+                        span
+                    .form-armor__check-text!="Согласен с "
+                        a(href="#") правилами обработки персональных данных
+            button.button.form-armor__submit(type="submit") Забронировать
+
+mixin text-block(caption,className)
+    section.text-block(class=className)
+        .container.text-block__row
+            h2.text-block__caption!=caption
+            p.text-block__text
+                span На территории Виллы есть бассейн с зоной джакузи и финской сауной, вода в бассейне подогревается с 10 апреля по 10 ноября, а также в период Новогодних праздников до 10 января. Наличие сауны позволяет купаться в бассейне круглогодично. Вокруг бассейна расположен ряд шезлонгов для любителей солнечных ванн.
+                span Беседка с большим столом и мангалом понравится любителям шашлыка. Для самых маленьких есть детская игровая зона. Лаунж-зона для вечернего отдыха. Вся территория радует разнообразием цветов на фоне строгой зелени хвойных растений. Цветочные перголы, лавочки, качели, понравятся любителям подышать свежим воздухом.
+
+mixin video(caption,text,img)
+    .big-container
+        section.video
+            .video__overflow(style="background-image:url('img/"+img+"');")
+            .container.video__row
+                .video__column-button
+                    a.video__button(href="https://www.youtube.com/embed/oa-9OBDIIeo")
+                        img(src="img/yt-play.svg", alt="yt-play")
+                .video__column-text
+                    h2.video__caption=caption
+                    p.video__text=text

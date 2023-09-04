@@ -1,0 +1,35 @@
+.container
+    form.price-form(action="#")
+        .price-form__date-form.js-date-form
+            label.price-form__input-label
+                input.input.js-date.js-date-in(type="text")
+                span.price-form__input-name Заезд
+                span.price-form__input-icon
+                    svg(width="18" height="20")
+                        use(xlink:href="#icon-date")
+            label.price-form__input-label
+                input.input.js-date.js-date-out(type="text")
+                span.price-form__input-name Выезд
+                span.price-form__input-icon
+                    svg(width="18" height="20")
+                        use(xlink:href="#icon-date")
+        label.price-form__input-label
+            input.input(type="text" value="2 взрослых")
+            span.price-form__input-name Гости
+            span.price-form__input-icon
+                svg(width="24" height="16")
+                    use(xlink:href="#icon-people")
+        label.price-form__input-label
+            input.input.number(type="text")
+            span.price-form__input-name Добавить детей
+            button(type="button").price-form__plus +
+        .price-form__radio-row
+            label
+                input.visually-hidden(type="radio", name="price-form-radio", checked)
+                span
+                |Вилла # 1
+            label
+                input.visually-hidden(type="radio", name="price-form-radio")
+                span
+                |Вилла # 2
+        button.button.price-form__submit(type="submit") Узнать стоимость

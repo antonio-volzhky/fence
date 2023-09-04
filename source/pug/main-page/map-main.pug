@@ -1,0 +1,23 @@
+section.map
+    .container.map__container
+        h2.visually-hidden map-main
+        <div class="map__map" id="map"></div>
+        script
+            include ../../js/modules/map.js
+        form.map__form(action="#")
+            .map__head
+                a.map__link(href="tel:+78612434556") +7 861 
+                    strong!=" 243-45-56"
+                .map__address Геленджик, ул. Тоцкого, 123
+            .map__caption
+                strong Заказать
+                |Обратный звонок
+            input.input(type="text" placeholder="Ваше имя")
+            input.input(type="tel" placeholder="Телефон")
+            .map__check-row
+                label
+                    input.visually-hidden(type="checkbox")
+                    span
+                .map__check-text!="Согласен с "
+                    a(href="#") правилами обработки персональных данных
+            button.button(type="submit") Отправить

@@ -1,0 +1,16 @@
+.logo {
+    @include hover();
+    flex: 0 0 222px;
+
+    @include font-b(48px,350,1,0,#244F68);
+
+    & span {
+        font-weight: 400;
+    }
+}
+
+@media (max-width:576px) {
+    .logo {
+        font-size: 39px;
+    }
+}

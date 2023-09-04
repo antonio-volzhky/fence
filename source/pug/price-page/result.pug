@@ -1,0 +1,21 @@
+-
+    var arr = [
+        {dt:"Время пребывания:",dd:"с 7 по 17 июля"},
+        {dt:"Количество ночей:",dd:"10 ночей"},
+        {dt:"Количество гостей:",dd:"2 взрослых, 1 ребенок"},
+    ]
+
+.result
+    .container
+        .result__row
+            .result__img 
+                img(src="img/villa-1.jpg", alt="result-photo")
+            dl.result__list 
+                each item in arr 
+                    dt=item.dt
+                    dd=item.dd
+            .result__column 
+                .result__price
+                    strong 24 000 руб. 
+                    |/сутки
+                button.button.result__btn(type="button") Забронировать          

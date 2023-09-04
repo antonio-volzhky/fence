@@ -1,0 +1,16 @@
+.container
+    form.call-form(action="#")
+        h2.call-form__caption
+            strong!="Заказать "
+            |Обратный звонок
+        p Подайте заявку,наш специалист свяжетсяс вами в ближайшее время
+        .call-form__row
+            input.input(type="text" placeholder="Ваше имя")
+            input.input(type="tel" placeholder="Телефон")
+            .call-form__check-row
+                label
+                    input.visually-hidden(type="checkbox")
+                    span
+                .call-form__check-text!="Согласен с "
+                    a(href="#") правилами обработки персональных данных
+        button.button(type="button") Оставить заявку

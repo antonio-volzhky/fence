@@ -1,0 +1,23 @@
+section.big-gallery
+    h2.visually-hidden big-gallery
+    .big-container
+        .swiper-container.big-gallery__big-slider
+            .swiper-wrapper
+                - for (var i=1;i<8;i++)
+                    .swiper-slide
+                        img(src="img/gallery-"+i+".png" alt="gallery")
+                        .container
+                            .big-gallery__title-block
+                                .big-gallery__title Пляж
+                                .big-gallery__text 10 минут на автомобиле
+            button.big-gallery__arrow.js-btn-next(type="button")
+                svg(width="29" height="20")
+                    use(xlink:href="#icon-arrow-right")
+            button.big-gallery__arrow.js-btn-prev(type="button")
+                svg(width="29" height="20")
+                    use(xlink:href="#icon-arrow-left")
+        .swiper-container.big-gallery__min-slider
+            .swiper-wrapper
+                - for (var i=1;i<8;i++)
+                    .swiper-slide
+                        img(src="img/gallery-"+i+".png" alt="gallery")

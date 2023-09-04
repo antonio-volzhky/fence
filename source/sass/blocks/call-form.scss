@@ -1,0 +1,131 @@
+.call-form {
+    display: flex;
+
+    padding: 23px 35px 5px 29px;
+    margin-bottom: 102px;
+    border: 2px solid #CDAD98;
+
+    & input:not([type="checkbox"]) {
+        flex: 0 0 250px;
+        margin: 0 14px 7px 0;
+        border: 1px solid #959595;
+    }
+
+    & p {
+        margin: 0;
+        margin-right: 17px;
+        margin-left: auto;
+        flex: 0 0 237px;
+        @include font-h(16px,300,1.2,0,#242424);
+    }
+
+    & button {
+        flex: 0 0 180px;
+        height: 40px;
+    }
+}
+
+.call-form__caption {
+    flex: 0 0 195px;
+    margin: 0;
+    margin-right: 4%;
+    @include font-b(34px,350,1,0,#244F68);
+
+    & strong {
+        font-weight: 400;
+        display: block;
+    }
+}
+
+.call-form__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.call-form__check-row {
+    flex: 0 0 100%;
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+
+    & input:checked+span::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #244F68;
+    }
+
+    & span {
+        @include center();
+        @include hover();
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        margin-right: 9px;
+        border: 1px solid #959595;
+    }
+}
+
+.call-form__check-text {
+    @include font-h (13px,300,1,0,#242424);
+    & a {
+        font-weight: 400;
+        text-decoration: underline;
+        @include hover();
+        color: #242424;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .call-form {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .call-form__row {
+        margin: 25px 0;
+    }
+
+    .call-form {
+        padding-bottom: 23px;
+
+        & p {
+            margin-left: auto;
+        }
+
+        & button {
+            margin-left: auto;
+            margin-top: 25px;
+            align-self: start;
+        }
+    }
+
+    .call-form__check-row {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .call-form__row {
+        flex: 0 0 100%;
+    }
+
+    .call-form {
+
+        & button {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .call-form {
+        display: block;
+        padding: 15px;
+    }
+
+    .call-form p {
+        margin-top: 20px;
+    }
+}

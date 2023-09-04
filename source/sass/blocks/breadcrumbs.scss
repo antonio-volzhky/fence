@@ -1,0 +1,48 @@
+.breadcrumbs {
+    @include list();
+    margin-top: 29px;
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+    position: relative;
+    margin-right: 38px;
+
+    @include font-h(15px,300,1.2,0,#244F68);
+
+    &:last-child {
+        margin-right: 0;
+
+        & .breadcrumbs__link {
+            @include no-hover();
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: "/";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        color: #c6c6c6;
+    }
+}
+
+.breadcrumbs__link {
+    @include hover();
+
+    color: #244F68;
+}
+
+@media(max-width: 500px) {
+    .breadcrumbs__row {
+        padding: 0 15px;
+    }
+}

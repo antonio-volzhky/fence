@@ -1,0 +1,24 @@
+include ../mixin.pug
+
+-
+    var arr = [
+        {icon:'#icon-conder',text:'Состема кондиционирования'},
+        {icon:'#icon-beach',text:'Чистый пляж'},
+        {icon:'#icon-wi-fi',text:'Бесплатный WiFi Интернет'},
+        {icon:'#icon-bbq',text:'Зона BBQ'},
+        {icon:'#icon-shop',text:'Магазины, рестораны, банкоматы, аптеки'},
+        {icon:'#icon-photo',text:'Экскурсии, туры, достопримечательности'},
+    ]
+
+section.best
+    +form-armor("best__form")
+    .container
+        h2.h2.best__caption Лучше чем отель
+        .best__row
+            p Вилла находится на первой береговой линии,в самом центре города Геленджик. Вилла открылась 18 августа 2018 года. Здание и территория выполнены в европейском стиле. Интерьеры холлов и номеров понравятся самым требовательным гостям. На Вилле установлено современное сантехническое, отопительное и охлаждающее оборудование.
+            ul
+                each item in arr
+                    li
+                        svg(width="42" height="42")
+                            use(xlink:href=item.icon)
+                        span=item.text

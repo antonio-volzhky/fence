@@ -1,0 +1,15 @@
+
+
+section.slider.main-slider(data-slider="main")
+    h1.visually-hidden Главная
+    .big-container.main-slider__big-container
+        .swiper-container
+            .swiper-wrapper
+                - for(var i=0;i<4;i++)
+                    .main-slider__slide.swiper-slide(style="background-image:url('img/main-top.jpg');")
+                        .container
+                            .main-slider__caption
+                                strong Открывайте для себя
+                                |все грани отдыха на море!
+                            a.button.main-slider__link(href="#") Подробнее
+        .container.swiper-pagination

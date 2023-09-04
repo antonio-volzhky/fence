@@ -1,0 +1,14 @@
+-
+    var list = [
+        {name:"Виллы"},
+        {name:"Галерея",},
+        {name:"Инфраструктура"},
+        {name:"Цены"},
+        {name:"Контакты"},
+    ]
+
+nav.nav.header__nav
+    ul.nav__list
+        each item in list
+            li.nav__item.active
+                a.nav__link(href="#")=item.name

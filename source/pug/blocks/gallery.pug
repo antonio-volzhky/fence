@@ -1,0 +1,19 @@
+-
+    var arr = [
+        "img/gallery-1.png",
+        "img/gallery-2.png",
+        "img/gallery-3.png",
+        "img/gallery-4.png",
+        "img/gallery-5.png",
+        "img/gallery-6.png",
+    ]
+
+section.gallery
+    h2.visually-hidden gallery
+    .big-container.gallery__container
+        ul.gallery__list
+            each img in arr
+                li
+                    a(href=img data-group="1")
+                        img(src=img, alt="gallery")
+                    span Гостиная

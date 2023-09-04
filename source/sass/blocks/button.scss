@@ -1,0 +1,9 @@
+.button {
+    @include hover();
+    @include center();
+    @include font-h(16px,300,1,0,#FFFFFF);
+    padding: 6px;
+    background-color: #CDAD98;
+    border: 1px solid #FFFFFF;
+    outline: 1px solid #CDAD98;
+}

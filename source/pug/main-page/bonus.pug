@@ -1,0 +1,15 @@
+-
+    var arr = [
+        {text:"С 1 мая - 31 августа при бронировании Виллы на 6 ночей",caption:"Седьмая ночь <strong>в подарок</strong>!",img:"img/gift-1.jpg"},
+        {text:"Комплимент от спа-центраи ресторана для молодоженов",caption:"Свадьба <strong>на островах</strong>!",img:"img/gift-2.jpg"},
+    ]
+
+section.bonus
+    h2.visually-hidden bonus
+    .container.bonus__row
+        each item in arr
+            .bonus__block(style="background-image:url('"+item.img+"');")
+                .bonus__column
+                    p=item.text
+                    .bonus__caption!=item.caption
+

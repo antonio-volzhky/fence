@@ -1,0 +1,21 @@
+extends pug/layout.pug
+block variables
+    - var title = 'Главная страница'
+
+block append head
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+include pug/mixin.pug
+
+block content
+    main.main
+        include pug/main-page/main-slider.pug
+        include pug/main-page/best.pug
+        include pug/blocks/gallery.pug
+        include pug/blocks/call-form.pug
+        include pug/main-page/info.pug
+        +text-block("Почему вы выберите <strong>Resort</strong>","text-block--grey")
+        include pug/main-page/bonus.pug
+        +video("Все что вам нужно","Интерьеры холлов и номеров понравятся самым требовательным гостям. На Вилле установлено современное сантехническое, отопительное и охлаждающее оборудование. ","video-1.png")
+        include pug/main-page/map-main.pug
+        +form-armor("")

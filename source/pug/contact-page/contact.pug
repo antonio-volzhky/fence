@@ -1,0 +1,19 @@
+.container
+    ul.contact
+        li
+            svg.contact__icon(width="48" height="43")
+                use(xlink:href="#icon-big-map")
+            .contact__name Наш адрес
+            .contact__text г. Геленджик, ул. Тоцкого, 123
+        li
+            svg.contact__icon(width="35" height="44")
+                use(xlink:href="#icon-big-tel")
+            .contact__name Телефон
+            a(href="tel:+78612434556").contact__tel +7 861
+                strong!=" 243-45-56"
+        li
+            svg.contact__icon(width="37" height="37")
+                use(xlink:href="#icon-mail")
+            .contact__name E-mail
+            a(href="mailto:info@resort.ru").contact__mail info@resort.ru
+

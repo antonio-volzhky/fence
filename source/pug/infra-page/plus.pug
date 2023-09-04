@@ -1,0 +1,19 @@
+-
+    var arr = [
+        {icon:'#icon-shop',text:'Магазины, рестораны, банкоматы, аптеки'},
+        {icon:'#icon-beach',text:'Чистый пляж'},
+        {icon:'#icon-wi-fi',text:'Бесплатный WiFi Интернет'},
+        {icon:'#icon-bbq',text:'Зона BBQ'},
+        {icon:'#icon-conder',text:'Состема кондиционирования'},
+        {icon:'#icon-photo',text:'Экскурсии, туры, достопримечательности'},
+    ]
+
+section.plus(style="background-image:url('img/infro.jpg');")
+    .container
+        h2.plus__caption у нас вы найдете:
+        ul.plus__list
+            each item in arr
+                li
+                    svg(width="42" height="42")
+                        use(xlink:href=item.icon)
+                    span=item.text

@@ -1,0 +1,15 @@
+.input {
+    display: flex;
+    align-items: center;
+    padding: 9px 13px 9px;
+    @include font-h(16px,300,1,0,#121212);
+    background-color: #fff;
+    outline: none;
+    border: none;
+    height: 44px;
+    max-width: 100%;
+
+    &::placeholder {
+        @include font-h(13px,300,1,0,#959595);
+    }
+}

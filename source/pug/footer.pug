@@ -1,0 +1,24 @@
+-
+    var social = [
+        {icon:"#icon-vk",social:"ВКонтакте"},
+        {icon:"#icon-fb",social:"Facebook"},
+        {icon:"#icon-ok",social:"Одноклассники"},
+        {icon:"#icon-insta",social:"Instagramm"},
+        {icon:"#icon-yt",social:"Youtube"},
+    ]
+
+footer.footer
+    .big-container.footer__row
+        .footer__logo.logo
+            span 
+                |Resort
+        p.footer__text
+            span &copy; Resort
+            |Аренда виллы в Геленджике
+        a.footer__link(href="#") Политика конфиденциальности
+        ul.social-list.footer__social-list
+            each item in social
+                li.social-list__item
+                    a.social-list__link(href="#" aria-label=item.aria)
+                        svg(width="34" height="34")
+                            use(xlink:href=item.icon)

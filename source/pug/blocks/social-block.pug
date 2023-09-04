@@ -1,0 +1,19 @@
+-
+    var social = [
+        {icon:"#icon-vk",social:"ВКонтакте"},
+        {icon:"#icon-fb",social:"Facebook"},
+        {icon:"#icon-ok",social:"Одноклассники"},
+        {icon:"#icon-insta",social:"Instagramm"},
+        {icon:"#icon-yt",social:"Youtube"},
+        {icon:"#icon-tw",social:"Twitter"},
+    ]
+
+.container
+    .social-block 
+        .social-block__caption Мы в социальных сетях:
+        ul.social-list.social-block__list
+            each item in social
+                li.social-list__item
+                    a(href="#" aria-label=item.aria)
+                        svg(width="34" height="34")
+                            use(xlink:href=item.icon)

@@ -1,0 +1,26 @@
+//- layout.pug
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        block head
+            meta(charset="utf-8")
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.")
+            title #{title}
+            link(rel="icon" type="image/x-icon" href="favicon.ico")
+            link(rel="stylesheet" href="css/style.min.css")
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    body
+        <div style="display:none">
+            <include src="build/img/icons/sprite.svg"></include>
+        </div>
+        include header.pug
+        block content
+        include footer.pug
+        .date-overflow
+        <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        script(src='js/script.js')

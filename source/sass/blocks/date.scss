@@ -1,0 +1,134 @@
+.daterangepicker .calendar-table .available {
+    @include font-h(18px,400,1,0,#242424);
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+    position: relative;
+}
+
+.daterangepicker td.off {
+    opacity: 0;
+}
+
+.daterangepicker .calendar-table .available::after {
+    content:  attr(data-cash);
+    display: block;
+    @include font-h(11px,400,1,0,#959595);
+    margin-top: 2px;
+}
+
+.daterangepicker td.available.active::after,
+.daterangepicker td.available.in-range::after,
+.daterangepicker td.available.active:hover::after {
+    color: #FFFFFF;
+}
+
+.daterangepicker td.available.active,
+.daterangepicker td.available.in-range,
+.daterangepicker td.available.in-range:hover,
+.daterangepicker td.available.active:hover {
+    background: #CDAD98;
+    color: #242424;
+    opacity: 1;
+}
+
+.daterangepicker .calendar-table th {
+    @include font-h(14px,400,1,0,#959595);
+}
+.daterangepicker thead tr:first-child th:not(.month),
+.daterangepicker:before,
+.daterangepicker:after {
+    display: none !important;
+}
+
+.daterangepicker .calendar-table th.month {
+    text-align: left;
+    @include font-b(40px,350,1,0,#000000);
+}
+
+.daterangepicker td.available.start-date,
+.daterangepicker td.available.end-date {
+    border-radius: 0 !important;
+}
+
+.daterangepicker .drp-calendar {
+    max-width: 50% !important;
+}
+
+.daterangepicker {
+    position: fixed !important;
+    z-index: 11 !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+    width: 800px !important;
+    // display: flex !important;
+}
+
+.date-overflow {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#FFFFFF,0.3);
+
+    &.active {
+        display: block;
+    }
+}
+
+.daterangepicker {
+    width: 800px;
+}
+
+.date-close {
+    @include btn();
+    @include hover();
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+@media screen and (max-width:991px) {
+    .daterangepicker {
+        width: 655px!important;
+    }
+
+    .daterangepicker .calendar-table .available {
+        min-width: 44px;
+        width: 44px;
+        height: 44px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .daterangepicker {
+        width: 655px!important;
+    }
+
+    .daterangepicker .ranges, .daterangepicker .drp-calendar {
+        float: none;
+    }
+
+    .daterangepicker {
+        height: 100vh;
+        overflow-y: auto;
+        margin-top: 0 !important;
+    }
+
+    .daterangepicker {
+        width: 320px!important;
+    }
+
+    .daterangepicker .drp-calendar {
+        max-width: 100%!important;
+    }
+
+    .daterangepicker .drp-calendar.left {
+        padding: 8px 2px 8px 2px !important;
+    }
+}

@@ -1,0 +1,11 @@
+.h2 {
+    margin: 0;
+
+    @include font-b(52px,350,1,0,#244F68);
+}
+
+@media (max-width:500px) {
+    .h2 {
+        font-size: 12vw;
+    }
+}

@@ -1,0 +1,20 @@
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 12px;
+
+    & span {
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background-color: $white;
+        border-radius: 1px;
+
+        &:last-child {
+            width: 75%;
+        }
+    }
+}

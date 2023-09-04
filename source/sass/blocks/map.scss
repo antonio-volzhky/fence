@@ -1,0 +1,144 @@
+.map--contact {
+    margin-bottom: 58px;
+    
+    .map__map {
+        height: 670px;
+    }
+}
+
+.map__container {
+    position: relative;
+}
+
+.map__form {
+    width: 290px;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    padding: 26px 20px;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.9);
+
+    & input {
+        color: #242424;
+        border: 1px solid #959595;
+        margin: 6px 0;
+        width: 100%;
+
+        &::placeholder {
+            @include font-h(13px,400,1,0,#959595);
+        }
+    }
+
+    & button {
+        width: 162px;
+        height: 44px;
+    }
+}
+
+.map__map {
+    height: 440px;
+    position:relative;
+    overflow:hidden;
+
+    background: #dedede;
+
+
+    width: 100%;
+    max-width: 100%;
+
+    & div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.map__check-row {
+    flex: 0 0 100%;
+    margin: 9px 0;
+    display: flex;
+    align-items: center;
+
+    & input:checked+span::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #244F68;
+    }
+
+    & span {
+        @include center();
+        @include hover();
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        margin-right: 9px;
+        border: 1px solid #959595;
+    }
+}
+
+.map__check-text {
+    margin-top: 12px;
+    margin-bottom: 13px;
+    @include font-h (13px,300,1,0,#242424);
+    & a {
+        font-weight: 400;
+        text-decoration: underline;
+        @include hover();
+        color: #242424;
+    }
+}
+
+.map .ymaps-2-1-78-controls__control {
+    inset: 108px 25px auto auto !important;
+}
+
+.map__link {
+    @include hover();
+    @include font-b(38px,350,1,0,#244F68);
+
+    & strong {
+        font-weight: 400;
+    }
+}
+
+.map__address {
+    @include font-h(13px,300,1.6,0,#242424);
+}
+
+.map__head {
+    padding-bottom: 16px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.map__caption {
+    @include font-b(34px,350,1,0,#244F68);
+
+    & strong {
+        font-weight: 400;
+    }
+}
+
+@media (max-width:768px) {
+    .map__form {
+        position: static;
+        border: 2px solid #CDAD98;
+        margin: 55px auto 0;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:576px) {
+    .map__map {
+        height: 400px;
+    }
+
+    .map--contact {
+        .map__map {
+            height: 400px;
+        }
+    }
+}
+
