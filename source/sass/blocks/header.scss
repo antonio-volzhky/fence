@@ -1,7 +1,7 @@
 .header {
     position: relative;
     background-color: #fff;
-    border-bottom: 1px solid#E4E4E4;;
+    border-bottom: 1px solid#E4E4E4;
 }
 
 .header__row {
@@ -12,6 +12,11 @@
 
 .header__logo {
     @include hover();
+
+    & span {
+        padding: 0 6px;
+        color: $red;
+    }
 }
 
 .header__mobile-block {
@@ -32,8 +37,8 @@
     height: 44px;
     flex: 0 0 200px;
 
-    @include font-h(16px,300,1,0,#242424);
-    border: 2px solid #CDAD98;
+    @include font-h(16px, 300, 1, 0, #242424);
+    border: 2px solid #cdad98;
 }
 
 .header__column-phone {
@@ -43,7 +48,7 @@
 
 .header__phone {
     @include hover();
-    @include font-b(48px,350,1,0,#244F68);
+    @include font-b(48px, 350, 1, 0, #244f68);
 
     & span {
         font-weight: 400;
@@ -55,7 +60,7 @@
 }
 
 .header__address {
-    @include font-h(16px,300,1.6,0,#242424);
+    @include font-h(16px, 300, 1.6, 0, #242424);
     text-align: right;
 }
 
@@ -63,13 +68,13 @@
     display: none;
 }
 
-@media (max-width:1400px) {
+@media (max-width: 1400px) {
     .header__row {
         padding: 4px 15px;
     }
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
     .header__hamburger {
         display: block;
         flex: 0 0 30px;
@@ -107,7 +112,7 @@
     }
 }
 
-@media (max-width:576px) {
+@media (max-width: 576px) {
     .header__logo {
         flex: 0 0 auto;
     }

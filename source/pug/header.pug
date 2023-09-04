@@ -1,17 +1,15 @@
 header.header
     .big-container.header__row
         .header__logo.logo
-            span 
-            |Resort
+            span ABS.
+            |FENCE MASTER
         .header__mobile-block.js-block.js-block-inactive(data-block="header-nav")
             include blocks/nav.pug
-            a.header__call(href="#") Обратный звонок
         .header__column-phone
-            a.header__phone(href="tel:") +7 861
-                span!=" 243-45-56"
-                svg(width="32" height="32")
-                    use(xlink:href="#icon-tel")
-            .header__address Геленджик, ул. Тоцкого, 123
+            |Call now:
+            a.header__phone(href="tel:+19168237859") +1 916 8237859
+            a.header__phone(href="tel:+19164954072") +1 916 4954072
+        a.header__link(href="#") Estimate
         button.hamburger.header__hamburger.js-btn(type="button" data-block="header-nav")
             span.hamburger__bar.hamburger__bar--bar1
             span.hamburger__bar.hamburger__bar--bar2
