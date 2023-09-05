@@ -34,7 +34,7 @@
 }
 
 .video__caption {
-    @include font-b(52px,400,1,0,#fff);
+    @include font-r(52px,400,1,0,#fff);
     margin-bottom: 54px;
 }
 
@@ -46,7 +46,7 @@
 .video__text {
     margin: 0;
     display: flex;
-    @include font-h(20px,300,1.4,0,#fff);
+    @include font-p(20px,300,1.4,0,#fff);
 
     &::before {
         content: "";

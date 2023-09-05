@@ -6,8 +6,25 @@
         {name:"Testimonials"},
     ]
 
+    var navTwo = [
+        {name:"Металлические"},
+        {name:"Wood Fences",},
+        {name:"Chain Link fences"},
+        {name:"3D panel fence"},
+        {name:"Vinyl Fences"},
+    ]
+
 nav.nav.header__nav
     ul.nav__list
-        each item in list
-            li.nav__item.active
-                a.nav__link(href="#")=item.name
+        each item,index in list
+            li.nav__item
+                if (index === 0)
+                    span.nav__link=item.name
+                    svg(width="16" height="9")
+                        use(xlink:href="#icon-arrow-min")
+                    ul.nav__two 
+                        each item2 in navTwo
+                            li 
+                                a(href="#")=item2.name
+                else                
+                    a.nav__link(href="#")=item.name

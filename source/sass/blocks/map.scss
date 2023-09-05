@@ -26,7 +26,7 @@
         width: 100%;
 
         &::placeholder {
-            @include font-h(13px,400,1,0,#959595);
+            @include font-p(13px,400,1,0,#959595);
         }
     }
 
@@ -81,7 +81,7 @@
 .map__check-text {
     margin-top: 12px;
     margin-bottom: 13px;
-    @include font-h (13px,300,1,0,#242424);
+    @include font-p (13px,300,1,0,#242424);
     & a {
         font-weight: 400;
         text-decoration: underline;
@@ -96,7 +96,7 @@
 
 .map__link {
     @include hover();
-    @include font-b(38px,350,1,0,#244F68);
+    @include font-r(38px,350,1,0,#244F68);
 
     & strong {
         font-weight: 400;
@@ -104,7 +104,7 @@
 }
 
 .map__address {
-    @include font-h(13px,300,1.6,0,#242424);
+    @include font-p(13px,300,1.6,0,#242424);
 }
 
 .map__head {
@@ -114,7 +114,7 @@
 }
 
 .map__caption {
-    @include font-b(34px,350,1,0,#244F68);
+    @include font-r(34px,350,1,0,#244F68);
 
     & strong {
         font-weight: 400;

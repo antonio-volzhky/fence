@@ -9,43 +9,130 @@
 }
 
 .nav__item {
-    margin: 5px 5%;
+    position: relative;
+    margin: 0 1.5%;
+    padding: 50px 7px;
     display: flex;
     align-items: center;
+
+    & + svg {
+        display: none;
+    }
+
+    &:hover {
+        & .nav__two {
+            display: block;
+        }
+    }
 }
 
 .nav__link {
-    @include hover();
-    @include font-h(18px,300,1,0,#242424);
+    @include font-p(18px,600,1,0,$grey);
+    position: relative;
+    display: block;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 192%;
+        left: 50%;
+
+        display: none;
+        width: 112%;
+        height: 3px;
+        background-color: $green;
+        transform: translateX(-50%);
+    }
+
+    &:hover {
+        &::before {
+            display: block;
+        }
+    }
 }
 
+.nav__two {
+    @include list();
 
-@media (max-width:1200px) {
+    position: absolute;
+    top: 99%;
+    left: 5px;
+    z-index: 2;
+
+    display: none;
+
+    padding: 18px 20px 10px;
+    width: 215px;
+
+    background-color: $white;
+    border-radius: 0px 0px 10px 10px;
+    
+
+    & li {
+        margin-bottom: 16px;
+    }
+
+    & a {
+        @include hover();
+        @include font-p(18px,400,1,0.03em,$grey);
+    }
+}
+
+@media (max-width:1100px) {
+    .nav__item {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width:1024px) {
     .nav {
        background-color: $white;
+    }
+
+    .nav__two {
+        position: static;
+        flex: 0 0 100%;
+        display: block;
+        padding: 21px 13px 0px;
+
+        & li {
+            margin-bottom: 12px;
+        }
     }
 
     .nav__list {
         display: block;
         margin-bottom: 30px;
-        border-top: 1px solid rgba(black,0.3);
     }
 
     .nav__item {
         margin: 0;
-        padding: 17px 0;
+        padding: 14px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
 
-        border-bottom: 1px solid rgba(black,0.3);
+        & > svg {
+            display: block;
+
+            transform: rotate(180deg);
+            transition: $transition;
+        }
+
+        &.active {
+            padding-bottom: 0;
+            
+            & > svg {
+                transform: rotate(0deg);
+                transition: $transition;
+            }
+        }
     }
 
     .nav__link {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .header__call {
-        width: 200px;
-        margin: 0 auto;
+        flex: 0 0 auto;
     }
 }

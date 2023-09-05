@@ -8,7 +8,7 @@
 
 .form-armor__caption {
     margin-right: 5%;
-    @include font-b(34px,350,1,0,#FFFFFF);
+    @include font-r(34px,350,1,0,#FFFFFF);
 
     & strong {
         font-weight: 400;
@@ -52,7 +52,7 @@
     position: absolute;
     top: 3px;
     left: 13px;
-    @include font-h(13px,300,1,0,#959595);
+    @include font-p(13px,300,1,0,#959595);
 }
 
 .form-armor__input-icon {
@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
 
-    @include font-h(13px,300,1,0,#FFFFFF);
+    @include font-p(13px,300,1,0,#FFFFFF);
 
     & label {
         display: flex;
@@ -124,7 +124,7 @@
 }
 
 .form-armor__check-text {
-    @include font-h (13px,300,1,0,#fff);
+    @include font-p (13px,300,1,0,#fff);
     & a {
         font-weight: 400;
         text-decoration: underline;

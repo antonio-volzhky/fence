@@ -1,11 +1,12 @@
 
-@media (max-width:1200px) {
+@media (max-width:1024px) {
     .js-block {
         position: absolute;
         z-index: 30;
         top: 99.1%;
         left: 0;
-        width: 100%;
+        width: 343px;
+        max-width: 100%;
 
         transition: all 0.2s ease-in;
         transform-origin: 0 0;

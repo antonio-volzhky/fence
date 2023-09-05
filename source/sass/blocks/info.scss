@@ -46,7 +46,7 @@
         padding: 12px 0;
         flex: 0 0 33%;
         border-bottom: 1px solid #e4e4e4;
-        @include font-h(20px,300,1.2,0,#244F68);
+        @include font-p(20px,300,1.2,0,#244F68);
     }
 
     & dd {
@@ -54,7 +54,7 @@
         padding: 12px 0;
         flex: 0 0 67%;
         border-bottom: 1px solid #e4e4e4;
-        @include font-h(20px,300,1.2,0,#242424);
+        @include font-p(20px,300,1.2,0,#242424);
 
         & span {
             font-size: 16px;
@@ -70,7 +70,7 @@
 
 .info__cash {
     margin-top: 66px;
-    @include font-b(48px,400,1,0,#CDAD98);
+    @include font-r(48px,400,1,0,#CDAD98);
     text-align: center;
 
     & strong {

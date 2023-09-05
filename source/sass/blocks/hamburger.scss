@@ -1,8 +1,8 @@
 .hamburger {
     @include btn();
 
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 26px;
     position: relative;
 
     transform: scaleX(1.2) scaleY(0.85);
@@ -10,11 +10,11 @@
 
   .hamburger__bar {
     padding: 0;
-    width: 30px;
-    height: 4px;
-    background-color: #244F68;
+    width: 28px;
+    height: 2px;
+    background-color: $grey;
     display: block;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: all 0.4s ease-in-out;
     position: absolute;
   }
@@ -45,25 +45,25 @@
 
     .hamburger__bar--bar1 {
       transform: rotate(45deg);
-      height: 3px;
-      width: 42px;
+      height: 2px;
+      width: 38px;
     }
 
     .hamburger__bar--bar3 {
       transform: rotate(45deg) translateY(-50%);
-      height: 3px;
+      height: 2px;
       background-color: transparent !important;
     }
 
     .hamburger__bar--bar2 {
       transform: rotate(-45deg) translateY(-50%);
-      height: 3px;
+      height: 2px;
       background-color: transparent !important;
     }
 
     .hamburger__bar--bar4 {
       transform: rotate(-45deg);
-      height: 3px;
-      width: 42px;
+      height: 2px;
+      width: 38px;
     }
   }

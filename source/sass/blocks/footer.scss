@@ -18,7 +18,7 @@
 .footer__text {
     margin-right: auto;
     flex: 0 0 auto;
-    @include font-h(13px,300,1.2,0,#242424);
+    @include font-p(13px,300,1.2,0,#242424);
 
     & span {
         display: block;
@@ -33,7 +33,7 @@
 
 .footer__link {
     @include hover();
-    @include font-h(13px,300,1.2,0,#242424);
+    @include font-p(13px,300,1.2,0,#242424);
     text-decoration: underline;
 }
 

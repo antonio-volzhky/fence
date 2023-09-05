@@ -16,7 +16,7 @@
         margin-right: 17px;
         margin-left: auto;
         flex: 0 0 237px;
-        @include font-h(16px,300,1.2,0,#242424);
+        @include font-p(16px,300,1.2,0,#242424);
     }
 
     & button {
@@ -29,7 +29,7 @@
     flex: 0 0 195px;
     margin: 0;
     margin-right: 4%;
-    @include font-b(34px,350,1,0,#244F68);
+    @include font-r(34px,350,1,0,#244F68);
 
     & strong {
         font-weight: 400;
@@ -68,7 +68,7 @@
 }
 
 .call-form__check-text {
-    @include font-h (13px,300,1,0,#242424);
+    @include font-p (13px,300,1,0,#242424);
     & a {
         font-weight: 400;
         text-decoration: underline;

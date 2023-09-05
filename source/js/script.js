@@ -10,5 +10,6 @@
 //= modules/open-popup.js
 //= modules/plus-input.js
 //= modules/date.js
+//= modules/toggle.js
 
 

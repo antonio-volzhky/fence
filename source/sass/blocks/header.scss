@@ -1,21 +1,27 @@
 .header {
     position: relative;
-    background-color: #fff;
-    border-bottom: 1px solid#E4E4E4;
+    background-color: $white;
 }
 
 .header__row {
     display: flex;
     align-items: center;
-    padding: 4px 49px;
+    padding-right: 50px;
 }
 
 .header__logo {
     @include hover();
 
+    @include font-r(16px,500,1,normal,$black);
+
     & span {
-        padding: 0 6px;
+        margin-right: 8px;
+        padding: 0 8px;
         color: $red;
+        font-weight: 600;
+        font-size: 24px;
+
+        border: 1px solid $red;
     }
 }
 
@@ -25,43 +31,49 @@
     align-items: center;
 }
 
-.header__nav {
-    margin: 0 auto;
-    flex: 1 0 auto;
+.header__link {
+    flex: 0 0 167px;
+    @include hover();
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 167px;
+    height: 55px;
+
+    @include font-p(16px,500,1,normal,$white);
+
+    background-color: $green;
+    border-radius: 12px;
 }
 
-.header__call {
-    margin: 0 7px;
-    @include hover();
-    @include center();
-    height: 44px;
-    flex: 0 0 200px;
-
-    @include font-h(16px, 300, 1, 0, #242424);
-    border: 2px solid #cdad98;
+.header__nav {
+    flex: 1 0 auto;
+    margin: 0 auto;
 }
 
 .header__column-phone {
-    flex: 0 0 260px;
-    margin-left: 28px;
-}
+    flex: 0 0 auto;
+    margin-left: 42px;
+    margin-right: 36px;
 
-.header__phone {
-    @include hover();
-    @include font-b(48px, 350, 1, 0, #244f68);
-
-    & span {
-        font-weight: 400;
-    }
-
-    & svg {
-        display: none;
-    }
-}
-
-.header__address {
-    @include font-h(16px, 300, 1.6, 0, #242424);
+    @include font-p(14px, 500, 1, 0, $black);
     text-align: right;
+    
+    & span {
+        margin-right: 10px;
+    }
+
+    & a {
+        @include hover();
+
+        color: $black;
+    }
+    
+    & a + a {
+        display: block;
+        margin-top: 10px;
+    }
 }
 
 .header__hamburger {
@@ -70,45 +82,60 @@
 
 @media (max-width: 1400px) {
     .header__row {
-        padding: 4px 15px;
+        padding: 24px 15px;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
+    .header__nav {
+        flex: none;
+        margin: 0;
+
+        margin-bottom: 72px;
+    }
+
+    .header__link {
+        flex: none;
+        margin-bottom: 51px;
+    }
+
     .header__hamburger {
         display: block;
-        flex: 0 0 30px;
+        flex: 0 0 28px;
         @include hover();
     }
 
     .header__mobile-block {
-        display: block;
+        flex-direction: column;
+        align-items: stretch;
         background-color: #fff;
-        padding-bottom: 30px;
-    }
-
-    .header__phone {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0;
-
-        & svg {
-            display: block;
-        }
-    }
-
-    .header__address {
-        display: none;
+        padding: 76px 30px 30px 30px;
     }
 
     .header__logo {
         margin-right: auto;
+
+        font-size: 11px;
+
+        & span {
+            padding: 0 6px;
+
+            font-size: 17px;
+        }
     }
 
     .header__column-phone {
-        flex: 0 0 auto;
+        flex: none;
         margin-right: 19px;
+
+        order: 2;
+
+        text-align: left;
+    }
+
+    .header__row {
+        padding-top: 21px;
+        padding-bottom: 21px;
     }
 }
 
@@ -120,5 +147,14 @@
     .header__column-phone {
         margin-left: 0;
         margin-right: 9px;
+
+        & span {
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        & a + a {
+            margin-top: 14px;
+        }
     }
 }

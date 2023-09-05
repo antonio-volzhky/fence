@@ -46,7 +46,7 @@
     justify-content: center;
 }
 
-@mixin font-b($size , $weight ,$height , $spacing, $color) {
+@mixin font-r($size , $weight ,$height , $spacing, $color) {
     font-family: $rubik;
     font-size: $size ;
     font-weight: $weight;
@@ -55,7 +55,7 @@
     color: $color;
 }
 
-@mixin font-h($size , $weight ,$height , $spacing, $color) {
+@mixin font-p($size , $weight ,$height , $spacing, $color) {
     font-family: $poppins;
     font-size: $size ;
     font-weight: $weight;

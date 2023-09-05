@@ -15,7 +15,7 @@
         opacity: 0;
         border-bottom: 1px solid #E4E4E4;
         padding: 10px 0 7px;
-        @include font-h(16px,300,1,0,#242424);
+        @include font-p(16px,300,1,0,#242424);
     }
 
     & a {

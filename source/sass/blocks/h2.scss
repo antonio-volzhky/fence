@@ -1,7 +1,7 @@
 .h2 {
     margin: 0;
 
-    @include font-b(52px,350,1,0,#244F68);
+    @include font-r(52px,350,1,0,#244F68);
 }
 
 @media (max-width:500px) {

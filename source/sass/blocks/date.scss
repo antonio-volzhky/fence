@@ -1,5 +1,5 @@
 .daterangepicker .calendar-table .available {
-    @include font-h(18px,400,1,0,#242424);
+    @include font-p(18px,400,1,0,#242424);
     min-width: 54px;
     width: 54px;
     height: 54px;
@@ -13,7 +13,7 @@
 .daterangepicker .calendar-table .available::after {
     content:  attr(data-cash);
     display: block;
-    @include font-h(11px,400,1,0,#959595);
+    @include font-p(11px,400,1,0,#959595);
     margin-top: 2px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .daterangepicker .calendar-table th {
-    @include font-h(14px,400,1,0,#959595);
+    @include font-p(14px,400,1,0,#959595);
 }
 .daterangepicker thead tr:first-child th:not(.month),
 .daterangepicker:before,
@@ -43,7 +43,7 @@
 
 .daterangepicker .calendar-table th.month {
     text-align: left;
-    @include font-b(40px,350,1,0,#000000);
+    @include font-r(40px,350,1,0,#000000);
 }
 
 .daterangepicker td.available.start-date,

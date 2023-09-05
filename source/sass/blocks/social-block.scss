@@ -15,7 +15,7 @@
 
 .social-block__caption {
     margin-right: 28px;
-    @include font-h(20px,300,1.4,0,#242424);
+    @include font-p(20px,300,1.4,0,#242424);
 }
 
 @media screen and (max-width:576px) {
